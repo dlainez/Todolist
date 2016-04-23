@@ -12,6 +12,11 @@
 		7081F6A91CCAEE92002DC1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6A71CCAEE92002DC1A6 /* Main.storyboard */; };
 		7081F6AB1CCAEE92002DC1A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6AA1CCAEE92002DC1A6 /* Assets.xcassets */; };
 		7081F6AE1CCAEE92002DC1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6AC1CCAEE92002DC1A6 /* LaunchScreen.storyboard */; };
+		7081F6B81CCAF1AE002DC1A6 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6B71CCAF1AE002DC1A6 /* Lista.swift */; };
+		7081F6BB1CCAF374002DC1A6 /* pen_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6BA1CCAF374002DC1A6 /* pen_icon.png */; };
+		7081F6BD1CCAF5F5002DC1A6 /* icon-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */; };
+		7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */; };
+		7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		7081F6AA1CCAEE92002DC1A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7081F6AD1CCAEE92002DC1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7081F6AF1CCAEE92002DC1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7081F6B71CCAF1AE002DC1A6 /* Lista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
+		7081F6BA1CCAF374002DC1A6 /* pen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen_icon.png; sourceTree = "<group>"; };
+		7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog.png"; sourceTree = "<group>"; };
+		7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,9 @@
 		7081F6A21CCAEE92002DC1A6 /* Todolist */ = {
 			isa = PBXGroup;
 			children = (
+				7081F6B91CCAF365002DC1A6 /* Resources */,
+				7081F6B61CCAF085002DC1A6 /* ViewControllers */,
+				7081F6B51CCAF077002DC1A6 /* Models */,
 				7081F6A31CCAEE92002DC1A6 /* AppDelegate.swift */,
 				7081F6A51CCAEE92002DC1A6 /* ViewController.swift */,
 				7081F6A71CCAEE92002DC1A6 /* Main.storyboard */,
@@ -62,6 +75,32 @@
 				7081F6AF1CCAEE92002DC1A6 /* Info.plist */,
 			);
 			path = Todolist;
+			sourceTree = "<group>";
+		};
+		7081F6B51CCAF077002DC1A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7081F6B71CCAF1AE002DC1A6 /* Lista.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7081F6B61CCAF085002DC1A6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */,
+				7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7081F6B91CCAF365002DC1A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7081F6BA1CCAF374002DC1A6 /* pen_icon.png */,
+				7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +163,9 @@
 			files = (
 				7081F6AE1CCAEE92002DC1A6 /* LaunchScreen.storyboard in Resources */,
 				7081F6AB1CCAEE92002DC1A6 /* Assets.xcassets in Resources */,
+				7081F6BB1CCAF374002DC1A6 /* pen_icon.png in Resources */,
 				7081F6A91CCAEE92002DC1A6 /* Main.storyboard in Resources */,
+				7081F6BD1CCAF5F5002DC1A6 /* icon-dog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7081F6A61CCAEE92002DC1A6 /* ViewController.swift in Sources */,
+				7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */,
 				7081F6A41CCAEE92002DC1A6 /* AppDelegate.swift in Sources */,
+				7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */,
+				7081F6B81CCAF1AE002DC1A6 /* Lista.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
