@@ -21,6 +21,7 @@ class AddItemViewController: UIViewController {
     
     @IBOutlet weak var ItemText: UITextField!
     @IBOutlet weak var SaveButton: UIBarButtonItem!
+    @IBOutlet weak var CancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +57,10 @@ class AddItemViewController: UIViewController {
                 }
             }
         //}
-        
-        
-        
-        
     }
 
+    @IBAction func Cancel(sender: AnyObject) {
+        
+    }
+    
 }

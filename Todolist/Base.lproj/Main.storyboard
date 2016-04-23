@@ -78,6 +78,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Add Todo" id="l1h-yI-dP3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rl7-tg-SJG">
+                                            <connections>
+                                                <action selector="Cancel:" destination="9Jg-Oi-y0h" id="Pmq-HX-dZ5"/>
+                                                <segue destination="FC2-Mt-oAo" kind="show" id="Wbb-d8-BVk"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="8kU-hL-3kW">
                                             <connections>
                                                 <action selector="Save:" destination="9Jg-Oi-y0h" id="c2R-Kp-N00"/>
@@ -107,6 +113,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CancelButton" destination="Rl7-tg-SJG" id="RAp-hD-IJc"/>
                         <outlet property="ItemText" destination="6a6-Yi-98K" id="BjN-Nn-5pg"/>
                         <outlet property="SaveButton" destination="8kU-hL-3kW" id="FIG-3O-b3J"/>
                     </connections>
