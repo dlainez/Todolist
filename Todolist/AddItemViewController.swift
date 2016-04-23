@@ -60,7 +60,9 @@ class AddItemViewController: UIViewController {
     }
 
     @IBAction func Cancel(sender: AnyObject) {
-        
+        self.dismissViewControllerAnimated(true) { 
+            
+        }
     }
     
 }

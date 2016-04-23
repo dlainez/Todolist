@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemDelegate {
+class ListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemDelegate, ChangeStatusDelegate, ListTableViewCellDelegate {
 
     var delegate : AddItemViewController!
     var ListadoVC = [Lista]()
@@ -20,6 +20,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //containerView.hidden = ListadoVC.count == 0 ? false : true
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +46,17 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
                 destinationVC.delegate = self
             }
         }
+        
+        if segue.identifier == "ShowChangeStatusSegue" {
+            if let destinationVC = segue.destinationViewController as? StatusItemViewController {
+                destinationVC.delegate = self
+                if let index = sender as? Int {
+                    destinationVC.newStatus = ListadoVC[index].Flag
+                    destinationVC.newIndex = index
+                }
+            }
+        }
     }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ListadoVC.count
@@ -57,7 +67,13 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
         
         let item = ListadoVC[indexPath.row]
         
-        tableViewCell.textLabel?.text = item.title
+        if let cell = tableViewCell as? ListTableViewCell {
+            cell.TitleCell.text = item.title
+            cell.ImageCell.image = item.Flag == 0 ? UIImage(named: "icon-dog-red")! : UIImage(named: "icon-dog-green")!
+            cell.delegate = self
+            cell.IndexSwitch = indexPath.row
+            cell.setGestureActive()
+        }
         
         return tableViewCell
     }
@@ -66,8 +82,24 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didAddItem(item: Lista) {
         ListadoVC.append(item)
-         containerView.hidden = ListadoVC.count == 0 ? false : true
+        
+        containerView.hidden = ListadoVC.count == 0 ? false : true
+        
+        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow : ListadoVC.count - 1, inSection : 0 )], withRowAnimation: UITableViewRowAnimation.Right)
+    }
+    
+    //ChangeStatusDelegate
+    
+    func didChangeStatus(Status: Int, Index : Int) {
+        ListadoVC[Index].Flag = Status
+        
         tableView.reloadData()
+    }
+    
+    //ListTableViewCellDelegate
+    
+    func shouldChangeStatusCell(Index: Int) {
+        self.performSegueWithIdentifier("ShowChangeStatusSegue", sender: Index)
     }
 
 }

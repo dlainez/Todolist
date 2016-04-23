@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7048B2B41CCBE41500B4380E /* icon-dog-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7048B2B31CCBE41500B4380E /* icon-dog-red.png */; };
+		7048B2B71CCBEB9700B4380E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048B2B61CCBEB9700B4380E /* ListTableViewCell.swift */; };
+		7048B2B91CCBEEFF00B4380E /* icon-dog-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7048B2B81CCBEEFF00B4380E /* icon-dog-green.png */; };
+		7048B2BC1CCC03FC00B4380E /* StatusItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048B2BB1CCC03FC00B4380E /* StatusItemViewController.swift */; };
 		7081F6A41CCAEE92002DC1A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6A31CCAEE92002DC1A6 /* AppDelegate.swift */; };
 		7081F6A61CCAEE92002DC1A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6A51CCAEE92002DC1A6 /* ViewController.swift */; };
 		7081F6A91CCAEE92002DC1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6A71CCAEE92002DC1A6 /* Main.storyboard */; };
@@ -14,12 +18,15 @@
 		7081F6AE1CCAEE92002DC1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6AC1CCAEE92002DC1A6 /* LaunchScreen.storyboard */; };
 		7081F6B81CCAF1AE002DC1A6 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6B71CCAF1AE002DC1A6 /* Lista.swift */; };
 		7081F6BB1CCAF374002DC1A6 /* pen_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6BA1CCAF374002DC1A6 /* pen_icon.png */; };
-		7081F6BD1CCAF5F5002DC1A6 /* icon-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */; };
 		7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */; };
 		7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7048B2B31CCBE41500B4380E /* icon-dog-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog-red.png"; sourceTree = "<group>"; };
+		7048B2B61CCBEB9700B4380E /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		7048B2B81CCBEEFF00B4380E /* icon-dog-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog-green.png"; sourceTree = "<group>"; };
+		7048B2BB1CCC03FC00B4380E /* StatusItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusItemViewController.swift; sourceTree = "<group>"; };
 		7081F6A01CCAEE92002DC1A6 /* Todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7081F6A31CCAEE92002DC1A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7081F6A51CCAEE92002DC1A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +36,6 @@
 		7081F6AF1CCAEE92002DC1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7081F6B71CCAF1AE002DC1A6 /* Lista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		7081F6BA1CCAF374002DC1A6 /* pen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen_icon.png; sourceTree = "<group>"; };
-		7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog.png"; sourceTree = "<group>"; };
 		7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7048B2B51CCBEB6F00B4380E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7048B2B61CCBEB9700B4380E /* ListTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7081F6971CCAEE92002DC1A6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +78,7 @@
 		7081F6A21CCAEE92002DC1A6 /* Todolist */ = {
 			isa = PBXGroup;
 			children = (
+				7048B2B51CCBEB6F00B4380E /* Views */,
 				7081F6B91CCAF365002DC1A6 /* Resources */,
 				7081F6B61CCAF085002DC1A6 /* ViewControllers */,
 				7081F6B51CCAF077002DC1A6 /* Models */,
@@ -90,6 +105,7 @@
 			children = (
 				7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */,
 				7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */,
+				7048B2BB1CCC03FC00B4380E /* StatusItemViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -97,8 +113,9 @@
 		7081F6B91CCAF365002DC1A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7048B2B31CCBE41500B4380E /* icon-dog-red.png */,
+				7048B2B81CCBEEFF00B4380E /* icon-dog-green.png */,
 				7081F6BA1CCAF374002DC1A6 /* pen_icon.png */,
-				7081F6BC1CCAF5F5002DC1A6 /* icon-dog.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -135,6 +152,7 @@
 				TargetAttributes = {
 					7081F69F1CCAEE92002DC1A6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TUR489ZN94;
 					};
 				};
 			};
@@ -165,7 +183,8 @@
 				7081F6AB1CCAEE92002DC1A6 /* Assets.xcassets in Resources */,
 				7081F6BB1CCAF374002DC1A6 /* pen_icon.png in Resources */,
 				7081F6A91CCAEE92002DC1A6 /* Main.storyboard in Resources */,
-				7081F6BD1CCAF5F5002DC1A6 /* icon-dog.png in Resources */,
+				7048B2B41CCBE41500B4380E /* icon-dog-red.png in Resources */,
+				7048B2B91CCBEEFF00B4380E /* icon-dog-green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +197,11 @@
 			files = (
 				7081F6A61CCAEE92002DC1A6 /* ViewController.swift in Sources */,
 				7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */,
+				7048B2BC1CCC03FC00B4380E /* StatusItemViewController.swift in Sources */,
 				7081F6A41CCAEE92002DC1A6 /* AppDelegate.swift in Sources */,
 				7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */,
 				7081F6B81CCAF1AE002DC1A6 /* Lista.swift in Sources */,
+				7048B2B71CCBEB9700B4380E /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,10 +316,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Todolist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = notes.Todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -306,10 +330,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Todolist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = notes.Todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -332,6 +359,7 @@
 				7081F6B41CCAEE92002DC1A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
