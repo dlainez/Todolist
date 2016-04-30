@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7010CCAF1CD43D6500D9A919 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7010CCAE1CD43D6500D9A919 /* EditItemViewController.swift */; };
 		7048B2B41CCBE41500B4380E /* icon-dog-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7048B2B31CCBE41500B4380E /* icon-dog-red.png */; };
 		7048B2B71CCBEB9700B4380E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7048B2B61CCBEB9700B4380E /* ListTableViewCell.swift */; };
 		7048B2B91CCBEEFF00B4380E /* icon-dog-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7048B2B81CCBEEFF00B4380E /* icon-dog-green.png */; };
@@ -20,9 +21,11 @@
 		7081F6BB1CCAF374002DC1A6 /* pen_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7081F6BA1CCAF374002DC1A6 /* pen_icon.png */; };
 		7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */; };
 		7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */; };
+		70FAC8391CD51B2C004EECBF /* EditNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FAC8381CD51B2C004EECBF /* EditNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7010CCAE1CD43D6500D9A919 /* EditItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		7048B2B31CCBE41500B4380E /* icon-dog-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog-red.png"; sourceTree = "<group>"; };
 		7048B2B61CCBEB9700B4380E /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		7048B2B81CCBEEFF00B4380E /* icon-dog-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dog-green.png"; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		7081F6BA1CCAF374002DC1A6 /* pen_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen_icon.png; sourceTree = "<group>"; };
 		7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		70FAC8381CD51B2C004EECBF /* EditNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				7081F6BE1CCB0764002DC1A6 /* AddItemViewController.swift */,
 				7081F6C01CCB0FCD002DC1A6 /* ListItemViewController.swift */,
 				7048B2BB1CCC03FC00B4380E /* StatusItemViewController.swift */,
+				7010CCAE1CD43D6500D9A919 /* EditItemViewController.swift */,
+				70FAC8381CD51B2C004EECBF /* EditNavigationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -196,8 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7081F6A61CCAEE92002DC1A6 /* ViewController.swift in Sources */,
+				70FAC8391CD51B2C004EECBF /* EditNavigationViewController.swift in Sources */,
 				7081F6BF1CCB0764002DC1A6 /* AddItemViewController.swift in Sources */,
 				7048B2BC1CCC03FC00B4380E /* StatusItemViewController.swift in Sources */,
+				7010CCAF1CD43D6500D9A919 /* EditItemViewController.swift in Sources */,
 				7081F6A41CCAEE92002DC1A6 /* AppDelegate.swift in Sources */,
 				7081F6C11CCB0FCD002DC1A6 /* ListItemViewController.swift in Sources */,
 				7081F6B81CCAF1AE002DC1A6 /* Lista.swift in Sources */,

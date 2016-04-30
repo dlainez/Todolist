@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemDelegate, ChangeStatusDelegate, ListTableViewCellDelegate {
+class ListItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemDelegate, ChangeStatusDelegate, ChangeTitleDelegate ,ListTableViewCellDelegate {
 
     var delegate : AddItemViewController!
     var ListadoVC = [Lista]()
@@ -28,6 +28,10 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
                 ListadoVC = outClase
             }
         }
+        
+        containerView.hidden = ListadoVC.count == 0 ? false : true
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +41,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(animated: Bool) {
         containerView.hidden = ListadoVC.count == 0 ? false : true
+        tableView.reloadData()
     }
 
     
@@ -62,6 +67,47 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             }
         }
+        
+        if segue.identifier == "ShowEditSegue" {
+            if let destinationVC = segue.destinationViewController as? EditNavigationViewController {
+                destinationVC.delegateEdit = self
+                if let index = sender as? Int {
+                    destinationVC.defaultText = ListadoVC[index].title
+                    destinationVC.defaultIndex = index
+                }
+            }
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            ListadoVC.removeAtIndex(indexPath.row)
+            
+            let inClase = NSKeyedArchiver.archivedDataWithRootObject(ListadoVC)
+            defaults.setObject(inClase, forKey: "KeyListadoVC")
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            
+        }
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let editButton = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Edit") { (rowAction: UITableViewRowAction, indexPath : NSIndexPath) -> Void in
+            self.performSegueWithIdentifier("ShowEditSegue", sender: indexPath.row)
+        }
+        
+        let deleteButton = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete") { (rowAction: UITableViewRowAction, indexPath : NSIndexPath) -> Void in
+            self.tableView(self.tableView, commitEditingStyle: UITableViewCellEditingStyle.Delete, forRowAtIndexPath: indexPath)
+        }
+        
+        return [deleteButton, editButton]
+        
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +158,16 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     func shouldChangeStatusCell(Index: Int) {
         self.performSegueWithIdentifier("ShowChangeStatusSegue", sender: Index)
+    }
+    
+    //ChangeTitleDelegate
+    func didChangeTitle(Title: String, Index: Int) {
+        ListadoVC[Index].title = Title
+        
+        let inClase = NSKeyedArchiver.archivedDataWithRootObject(ListadoVC)
+        defaults.setObject(inClase, forKey: "KeyListadoVC")
+        
+        tableView.reloadData()
     }
 
 }
