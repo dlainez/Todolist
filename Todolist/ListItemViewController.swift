@@ -12,6 +12,7 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
 
     var delegate : AddItemViewController!
     var ListadoVC = [Lista]()
+    var defaults = NSUserDefaults.standardUserDefaults()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerView: UIView!
@@ -21,6 +22,12 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
 
         // Do any additional setup after loading the view.
         //containerView.hidden = ListadoVC.count == 0 ? false : true
+        
+        if let outData = defaults.objectForKey("KeyListadoVC") as? NSData {
+            if let outClase = NSKeyedUnarchiver.unarchiveObjectWithData(outData) as? [Lista] {
+                ListadoVC = outClase
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +36,6 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(animated: Bool) {
-
         containerView.hidden = ListadoVC.count == 0 ? false : true
     }
 
@@ -83,6 +89,9 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     func didAddItem(item: Lista) {
         ListadoVC.append(item)
         
+        let inClase = NSKeyedArchiver.archivedDataWithRootObject(ListadoVC)
+        defaults.setObject(inClase, forKey: "KeyListadoVC")
+        
         containerView.hidden = ListadoVC.count == 0 ? false : true
         
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow : ListadoVC.count - 1, inSection : 0 )], withRowAnimation: UITableViewRowAnimation.Right)
@@ -92,6 +101,9 @@ class ListItemViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didChangeStatus(Status: Int, Index : Int) {
         ListadoVC[Index].Flag = Status
+        
+        let inClase = NSKeyedArchiver.archivedDataWithRootObject(ListadoVC)
+        defaults.setObject(inClase, forKey: "KeyListadoVC")
         
         tableView.reloadData()
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Lista: NSObject {
+class Lista: NSObject, NSCoding {
     
     
     var title : String!
@@ -16,7 +16,21 @@ class Lista: NSObject {
     
     override init() {
         Flag = 0
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        if let inTitle = aDecoder.decodeObjectForKey("title") as? String {
+            title = inTitle
+        }
         
+        if let inStatus = aDecoder.decodeObjectForKey("status") as? Int {
+            Flag = inStatus
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(title, forKey: "title")
+        aCoder.encodeObject(Flag, forKey: "status")
     }
 
 }
