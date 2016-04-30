@@ -19,38 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pen_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-1U-UBb">
-                                <rect key="frame" x="66" y="100" width="188" height="194"/>
+                                <rect key="frame" x="20" y="100" width="560" height="194"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="00E-U6-W6c"/>
-                                    <constraint firstAttribute="height" constant="194" id="53R-fy-Kgf"/>
+                                    <constraint firstAttribute="height" constant="194" id="mU5-4P-uhP"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New ToDo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbI-vh-Mh1">
-                                <rect key="frame" x="58" y="331" width="205" height="35"/>
+                                <rect key="frame" x="0.0" y="331" width="600" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="205" id="9wQ-T3-Dzc"/>
-                                    <constraint firstAttribute="height" constant="35" id="SUt-2Z-n51"/>
+                                    <constraint firstAttribute="height" constant="35" id="WHt-8d-klO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3P-oo-Shg">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Iki-l1-NAd"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Or-h2-hk8">
-                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5L4-1U-UBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="1YU-lj-CAd"/>
-                            <constraint firstItem="cbI-vh-Mh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="84V-5R-Y5E"/>
-                            <constraint firstItem="5L4-1U-UBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="c98-ah-E6X"/>
-                            <constraint firstItem="cbI-vh-Mh1" firstAttribute="top" secondItem="5L4-1U-UBb" secondAttribute="bottom" constant="37" id="fsE-ER-aP1"/>
+                            <constraint firstItem="5L4-1U-UBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="58j-6v-pKe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cbI-vh-Mh1" secondAttribute="trailing" constant="-20" id="6CB-vc-ddt"/>
+                            <constraint firstItem="cbI-vh-Mh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Ikj-m5-CfV"/>
+                            <constraint firstItem="5L4-1U-UBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c3F-zx-dll"/>
+                            <constraint firstItem="5L4-1U-UBb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="g3H-qQ-01Q"/>
+                            <constraint firstItem="cbI-vh-Mh1" firstAttribute="top" secondItem="5L4-1U-UBb" secondAttribute="bottom" constant="37" id="leu-kO-ofm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -90,7 +81,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Add ToDo" id="l1h-yI-dP3">
+                                    <navigationItem id="l1h-yI-dP3">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rl7-tg-SJG">
                                             <connections>
                                                 <action selector="Cancel:" destination="9Jg-Oi-y0h" id="Pmq-HX-dZ5"/>
@@ -186,8 +177,8 @@
                                     <outlet property="delegate" destination="FC2-Mt-oAo" id="RFE-oL-TeC"/>
                                 </connections>
                             </tableView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iK1-7p-XBw">
-                                <rect key="frame" x="0.0" y="1" width="600" height="600"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iK1-7p-XBw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="embed" id="aIv-Uf-TKi"/>
                                 </connections>
@@ -195,8 +186,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iK1-7p-XBw" secondAttribute="trailing" id="1cI-u2-7wN"/>
                             <constraint firstItem="zLy-Dd-Uoh" firstAttribute="top" secondItem="Lc0-VQ-Gld" secondAttribute="bottom" id="G3T-7S-B9C"/>
                             <constraint firstItem="zLy-Dd-Uoh" firstAttribute="leading" secondItem="UhV-8n-eQa" secondAttribute="leadingMargin" constant="-20" id="Xuf-hH-5jw"/>
+                            <constraint firstItem="iK1-7p-XBw" firstAttribute="leading" secondItem="UhV-8n-eQa" secondAttribute="leading" id="YpT-uv-WGS"/>
+                            <constraint firstAttribute="bottom" secondItem="iK1-7p-XBw" secondAttribute="bottom" id="bUQ-F7-nTA"/>
+                            <constraint firstItem="iK1-7p-XBw" firstAttribute="top" secondItem="UhV-8n-eQa" secondAttribute="top" id="f87-KJ-LD7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zLy-Dd-Uoh" secondAttribute="trailing" constant="-20" id="nAJ-5G-XW5"/>
                             <constraint firstItem="RwV-g1-fot" firstAttribute="top" secondItem="zLy-Dd-Uoh" secondAttribute="bottom" id="un9-2B-GND"/>
                         </constraints>
